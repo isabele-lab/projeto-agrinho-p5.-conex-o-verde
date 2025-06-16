@@ -1,0 +1,89 @@
+<div id="tela-apresentacao">
+  <h1 style="text-align: center; margin-top: 120px;">🌱 Conexão Verde</h1>
+  <p style="text-align: center; font-size: 18px;">Conectando o campo à cidade de forma sustentável com os melhores produtos da região!</p>
+  <div style="text-align: center; margin-top: 40px;">
+    <button id="btn-iniciar">Iniciar</button>
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conexão Verde</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Conexão Verde</h1>
+  </header>
+
+  <!-- Login -->
+  <section id="tela-login" class="tela ativa">
+    <h2>Login</h2>
+    <input type="email" id="input-usuario" placeholder="Usuário (email)" />
+    <input type="password" id="input-senha" placeholder="Senha" />
+    <div class="seleciona-tipo">
+      <button id="btn-produtor">Produtor</button>
+      <button id="btn-consumidor">Consumidor</button>
+    </div>
+    <button id="btn-entrar">Entrar</button>
+  </section>
+
+  <!-- Produtor -->
+  <section id="tela-produtor" class="tela">
+    <h2>Painel do Produtor</h2>
+    <button id="btn-novo-produto">Cadastrar Novo Produto</button>
+    <div id="lista-produtos-produtor"></div>
+    <button class="btn-voltar">Voltar</button>
+  </section>
+
+  <!-- Formulário produto -->
+  <section id="tela-form" class="tela">
+    <h2>Cadastro de Produto</h2>
+    <form id="form-produto">
+      <label>Nome do Produto:
+        <input type="text" id="input-nome" required />
+      </label>
+      <label>Preço:
+        <input type="text" id="input-preco" required />
+      </label>
+      <label>Benefícios:
+        <input type="text" id="input-beneficios" />
+      </label>
+      <label>Receita:
+        <input type="text" id="input-receita" />
+      </label>
+      <label>Produtor:
+        <input type="text" id="input-produtor" />
+      </label>
+      <label>URL da Imagem:
+        <input type="url" id="input-img-url" />
+      </label>
+      <button type="submit">Salvar Produto</button>
+    </form>
+    <button class="btn-voltar">Voltar</button>
+  </section>
+
+  <!-- Consumidor -->
+  <section id="tela-consumidor" class="tela">
+    <h2>Produtos Disponíveis</h2>
+    <div id="lista-produtos-consumidor"></div>
+    <button id="btn-chat">Fale com o Produtor</button>
+    <button class="btn-voltar">Voltar</button>
+  </section>
+
+  <!-- Chat -->
+  <section id="tela-chat" class="tela">
+    <h2>Chat com o Produtor</h2>
+    <div id="area-chat"></div>
+    <input type="text" id="input-mensagem" placeholder="Digite sua mensagem..." />
+    <button id="btn-enviar">Enviar</button>
+    <button class="btn-voltar">Voltar</button>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
